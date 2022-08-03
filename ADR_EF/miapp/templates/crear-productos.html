@@ -1,13 +1,8 @@
-{% extends 'layout.html' %} 
+{% extends 'layout.html' %}
 
-{% block title %} 
-    Productos
-{% endblock title %} 
-
-
-{% block content %}
-
-    <h2> </h2>
-    
-
-{% endblock content %}
+{% block content%}
+    <h1>Producto Registrado</1>
+    <br> <b>Codigo:</b> {{producto.codigo}} <br> <b>nombre:</b> {{producto.nombre}} <br> <b>Precio Compra:</b> {{producto.precio_compra}}
+    <br> <b>Precio Venta:</b> {{producto.precio_venta}} <br> <b>fecha Compra:</b> {{producto.fecha_compra}} <br> <b>fecha Registro:</b> {{producto.fecha_registro }}
+    <br><b>Estado:</b>{{producto.estado}}
+{% endblock content%}
