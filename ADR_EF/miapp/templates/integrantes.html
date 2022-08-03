@@ -1,0 +1,15 @@
+{% extends 'layout.html' %} 
+
+{% block title %} 
+    INTEGRANTES
+{% endblock title %} 
+
+
+{% block content %}
+
+    <h2>Los integrantes son:</h2>
+    {%for integrante in integrantes%}
+        <br><li>{{integrante}}</li>
+    {%endfor%}
+
+{% endblock content %}

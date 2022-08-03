@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}{% endblock %} EXAMEN FINAL</title>
+    {% load static %}
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/style.css' %}"
+    />
+  </head>
+  <body>
+    <header>
+      <div id="logotipo">
+        <img src="{% static 'image/untels.png' %}" width="20%" />
+        <h1>EXAMEN FINAL LP3</h1>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="{% url 'inicio' %}"> Inicio</a></li>
+        <li><a href="{% url 'integrantes' %}"> Integrantes </a></li>
+        <li><a href="{% url 'crear-productos' %}"> Crear Productos </a></li>
+        <li><a href="{% url 'crear-curso' %}"> Crear Cursos </a></li>
+      </ul>
+    </nav>
+    <div class="barra">
+      <span class="esquina-izquierda"></span>
+      <span class="relleno-barra"></span>
+      <span class="esquina-derecha"></span>
+    </div>
+    <div id="content">
+      <div class="box">{% block content %}{% endblock %}</div>
+    </div>
+    <footer>UNTELS - 2022</footer>
+  </body>
+</html>
